@@ -1,0 +1,96 @@
+/* Embed-specific styles */
+.embed-layout {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+}
+
+/* Reset some default styles */
+.embed-layout * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Calendar day styling */
+.embed-layout .calendar-day {
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.embed-layout .calendar-day.available:hover {
+  background-color: #e8e8ff;
+  transform: scale(1.05);
+  font-weight: 500;
+}
+
+.embed-layout .calendar-day.selected {
+  background-color: #4f46e5 !important;
+  color: white !important;
+  font-weight: 600;
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
+}
+
+/* Improve button styles */
+.embed-layout button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.embed-layout button:hover {
+  opacity: 0.8;
+}
+
+.embed-layout button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+}
+
+/* Make sure the calendar is fully visible */
+@media (max-width: 400px) {
+  .embed-layout {
+    font-size: 0.8rem;
+  }
+}
+
+/* Style for available vs unavailable days */
+.embed-layout .unavailable {
+  color: #d1d5db;
+  cursor: not-allowed;
+  background-color: #f9fafb;
+}
+
+.embed-layout .outside-month {
+  color: #9ca3af;
+  opacity: 0.5;
+}
+
+/* Footer styling */
+.embed-layout .calendar-footer {
+  border-top: 1px solid #f3f4f6;
+  padding: 8px;
+}
+
+/* Powered by text */
+.embed-layout .powered-by {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.embed-layout .powered-by a {
+  color: #4f46e5;
+  text-decoration: none;
+} 
