@@ -14,45 +14,6 @@ Schedly is a full-stack web application for managing scheduling and bookings. It
 - **Admin Dashboard**: Manage users, calendars, and bookings
 - **Responsive Design**: Modern and mobile-friendly interface
 
-## Embedding Calendars
-
-Schedly provides an easy way to embed your booking calendars on any website. This allows your clients to book appointments directly from your website without leaving the page.
-
-### How to Embed
-
-1. Navigate to your Dashboard
-2. Find the calendar you want to embed
-3. Click the "Embed" button
-4. Copy the provided embed code
-
-### Embed Code Example
-
-```html
-<iframe 
-  src="http://localhost:5173/embed/calendar/[calendar-id]" 
-  width="100%" 
-  height="700px" 
-  frameborder="0"
-></iframe>
-```
-
-### Customization Options
-
-You can customize the embedded calendar by adding parameters to the URL:
-
-- `theme`: Choose between 'light' and 'dark' themes
-- `hideHeader`: Set to 'true' to hide the calendar header
-- `lang`: Set the calendar language (default: 'en')
-
-Example with parameters:
-```html
-<iframe 
-  src="http://localhost:5173/embed/calendar/[calendar-id]?theme=dark&hideHeader=true" 
-  width="100%" 
-  height="700px" 
-  frameborder="0"
-></iframe>
-```
 
 ### Responsive Design
 
@@ -84,7 +45,7 @@ The embedded calendar is fully responsive and will adapt to any container size. 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/schedly.git
+   git clone https://github.com/Nadeera3784/schedly.git
    cd schedly
    ```
 
