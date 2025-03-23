@@ -63,13 +63,11 @@ exports.createBooking = async (req, res) => {
     
     // Log the available days and day of week for debugging
     const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    console.log(`Booking day of week: ${dayOfWeek} (${dayNames[dayOfWeek]})`);
-    console.log(`Calendar available days before conversion:`, calendar.availableDays);
+
     
     // Convert available days to numbers for consistent comparison
     const availableDaysAsNumbers = calendar.availableDays.map(day => Number(day));
-    console.log(`Calendar available days after conversion:`, availableDaysAsNumbers);
-    console.log(`Is day available:`, availableDaysAsNumbers.includes(dayOfWeek));
+
     
     if (!availableDaysAsNumbers.includes(dayOfWeek)) {
       return res.status(400).json({

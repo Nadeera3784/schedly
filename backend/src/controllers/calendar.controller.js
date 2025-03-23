@@ -286,8 +286,6 @@ exports.getAvailableSlots = async (req, res) => {
     
     // Convert available days to numbers for consistent comparison
     const availableDaysAsNumbers = calendar.availableDays.map(day => Number(day));
-    console.log(`[Available Slots] Checking day ${dayOfWeek} (${dayNames[dayOfWeek]}) in available days:`, availableDaysAsNumbers);
-    console.log(`[Available Slots] Available days are: ${availableDaysAsNumbers.map(dayIndex => dayNames[dayIndex]).join(', ')}`);
     
     if (!availableDaysAsNumbers.includes(dayOfWeek)) {
       console.log(`[Available Slots] Day ${dayOfWeek} (${dayNames[dayOfWeek]}) not available`);
