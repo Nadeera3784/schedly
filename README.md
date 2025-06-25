@@ -103,7 +103,3 @@ EMAIL_USER=your_email_user
 EMAIL_PASS=your_email_password
 FRONTEND_URL=http://localhost:5173
 ```
-
-## License
-
-MIT 
